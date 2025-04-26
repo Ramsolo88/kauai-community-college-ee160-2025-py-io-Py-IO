@@ -1,0 +1,26 @@
+#  AramsPythonIO will prompt users for an input which will be printed back out to them
+#     Created by Aram Asman
+#        Creation Date: 04/23/2025
+#        Last Edit: 04/25/2025
+
+# Task 1: Prompt user input and print back
+var_1 = input("Type something to save to a file:")
+print("You typed: " ,var_1)
+# this will echo the user's input 
+
+# Task 2: Open/Close File
+file_name = "text.txt"
+file = open(file_name, "w") 
+# File opened in write mode
+file.write(var_1 + "\n")
+file.close()
+# file should now be closed
+
+# Task 3: APPEND
+var_2 = input("Type something else now:") 
+# Asks for a new user input
+file = open(file_name, "a")
+# Reopens file to append it with user's new input
+file.write(var_2)
+file.close()
+
